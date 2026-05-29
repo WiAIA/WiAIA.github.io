@@ -2,22 +2,7 @@
 
 This guide provides comprehensive instructions for volunteers working with images on the Women in AI & Analytics Mentoring website. Proper image management is essential for maintaining fast load times, accessibility, and a professional appearance across our nonprofit platform.
 
-## Table of Contents
-- [Image Organization](#image-organization)
-- [Image Specifications](#image-specifications)
-- [Image Optimization](#image-optimization)
-- [Adding Images to Pages](#adding-images-to-pages)
-- [Image Naming Conventions](#image-naming-conventions)
-- [Accessibility](#accessibility)
-- [Stock Photo Resources](#stock-photo-resources)
-- [Copyright and Usage](#copyright-and-usage)
-- [Performance](#performance)
-- [Troubleshooting](#troubleshooting)
-- [Quick Checklist](#quick-checklist)
-
 ## Image Organization
-
-### Directory Structure
 
 Images are organized in the `assets/images/` directory with the following subdirectories:
 
@@ -31,46 +16,12 @@ assets/images/
 └── general/       # Various site images (as needed)
 ```
 
-### Folder Specifications
-
-- **hero/**: Full-width header images for main sections
-  - Dimensions: 1920x1080px
-  - Purpose: Primary hero sections and landing page headers
-  - Format: WebP primary, JPEG fallback
-
-- **team/**: Professional headshots of team members
-  - Dimensions: 400x400px (will be cropped to circular)
-  - Purpose: Team member profiles and about pages
-  - Format: WebP primary, JPEG fallback
-
-- **testimonials/**: Profile photos for testimonials
-  - Dimensions: 200x200px (rounded square)
-  - Purpose: Quote testimonials and success stories
-  - Format: WebP primary, JPEG fallback
-
-- **events/**: Photos from workshops, meetups, and events
-  - Dimensions: 800x600px (4:3 aspect ratio)
-  - Purpose: Event documentation and gallery pages
-  - Format: WebP primary, JPEG fallback
-
-- **partners/**: Organization logos and brand assets
-  - Dimensions: Variable (optimize for web)
-  - Purpose: Partner showcases and acknowledgments
-  - Format: PNG for transparency, SVG for logos
-
-- **general/**: miscellaneous site images
-  - Dimensions: As needed, optimized for context
-  - Purpose: Various content areas and supporting graphics
-  - Format: WebP primary, PNG for transparency needs
-
 ## Image Specifications
 
 ### Hero Images
 - **Dimensions**: 1920x1080px (16:9 aspect ratio)
 - **Format**: WebP primary + JPEG fallback
 - **Maximum Size**: 500KB
-- **Color Profile**: sRGB
-- **DPI**: 72 (web standard)
 
 ### Team Photos
 - **Dimensions**: 400x400px (will be cropped to circular)
@@ -380,9 +331,6 @@ Link: https://unsplash.com/@janesmith
 3. **Provide responsive images** with srcset for different screen sizes
 4. **Implement lazy loading** for non-critical images
 5. **Use appropriate dimensions** - don't serve large images for small displays
-6. **Consider CDN delivery** for faster global access
-7. **Enable browser caching** for static image assets
-8. **Use progressive JPEGs** for better perceived load time
 
 ## Troubleshooting
 
