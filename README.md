@@ -1,4 +1,4 @@
-# Women in AI & Analytics Mentoring Website
+# WiAIA - Women in AI & Analytics
 
 Modern, accessible nonprofit website for Women in AI & Analytics Mentoring community.
 
