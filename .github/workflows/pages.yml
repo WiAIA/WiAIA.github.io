@@ -35,15 +35,14 @@ jobs:
           ruby-version: '3.2'
           bundler-cache: true
 
-      - name: Install dependencies and regenerate lockfile
+      - name: Install dependencies
         run: |
           gem install bundler
           bundle install
-          bundle lock --add-platform x86_64-linux x86_64-linux-musl
 
       - name: Build with Jekyll
-        # Output to site directory
-        run: bundle exec jekyll build --baseurl '' --output-dir site
+        # Use destination instead of output-dir for Jekyll 4.3.4 compatibility
+        run: bundle exec jekyll build --destination ./site
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
