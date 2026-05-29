@@ -2,6 +2,20 @@
 
 Welcome to the Women in AI & Analytics Mentoring website content editing guide! This document is designed to help volunteers maintain and update our nonprofit website with confidence. Whether you're a technical expert or just getting started with web content, this guide will walk you through everything you need to know to keep our site fresh and engaging.
 
+## Prerequisites
+
+Before you start editing content, make sure you have:
+
+### Required
+- **GitHub Account**: A free GitHub account is required to make contributions
+- **Access Permissions**: Ask an admin to add you as a collaborator to the WIAIA repository
+- **Basic Computer Skills**: Comfort with text editing and following instructions
+
+### Recommended
+- **Web Browser**: Modern browser (Chrome, Firefox, Safari, or Edge)
+- **Email Access**: For receiving GitHub notifications
+- **Basic Understanding**: Familiarity with how websites work (optional)
+
 ## Table of Contents
 
 1. [Understanding the Structure](#understanding-the-structure)
@@ -144,9 +158,16 @@ Find the file you want to edit in the file structure:
 - **Text Editors**: Save/Ctrl+S (Cmd+S on Mac)
 - **Remember:** Always save with a `.md` extension
 
-### Step 5: Test Locally (Recommended)
+### Step 5: Test Your Changes
 
-Before making changes live, test them locally using Jekyll.
+**Option A: GitHub Preview (Easiest)**
+- GitHub automatically shows a preview of your changes in the editor
+- No technical setup required
+- Scroll down to see "Preview" tab when editing files
+
+**Option B: Local Testing (For Technical Users)**
+
+Before making changes live, test them locally using Jekyll:
 
 ---
 
@@ -219,7 +240,7 @@ Our site uses reusable components for consistency. Here are the most common ones
 ### For Non-Technical Users (Using GitHub.com)
 
 1. **Go to GitHub.com** and log in
-2. **Navigate** to thewiaia/wiaia repository
+2. **Navigate** to the WIAIA repository: [https://github.com/thewiaia/wiaia](https://github.com/thewiaia/wiaia)
 3. **Click** on the file you want to edit
 4. **Click** the pencil icon to edit
 5. **Make your changes** in the editor
@@ -387,8 +408,16 @@ countries: 8
 ### Support Channels
 
 1. **GitHub Issues**: Report bugs or request help through GitHub
+   - Create an issue in the WIAIA repository with clear descriptions
+   - Screenshots help us understand your issue quickly
+
 2. **Email**: contact@wiaia.org for general questions
+   - Include "Content Editing Question" in the subject line
+   - Allow 24-48 hours for response
+
 3. **Discord**: Join our community Discord for real-time help
+   - To join: Contact an admin for an invite link
+   - We have dedicated channels for content editing questions
 
 ---
 
