@@ -130,6 +130,13 @@ permalink: /mentorship/
     overflow: hidden;
 }
 
+.faq-heading {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #1f2937;
+}
+
 .faq-question {
     padding: 1.25rem;
     cursor: pointer;
@@ -352,10 +359,10 @@ permalink: /mentorship/
 </div>
 
 <div class="faq-container">
-    <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem; color: #1f2937;">Frequently Asked Questions</h2>
+    <h2 class="faq-heading">Frequently Asked Questions</h2>
 
     <div class="faq-item">
-        <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+        <div class="faq-question">
             Who is eligible to participate in the mentorship program?
             <span></span>
         </div>
@@ -365,7 +372,7 @@ permalink: /mentorship/
     </div>
 
     <div class="faq-item">
-        <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+        <div class="faq-question">
             How are mentor-mentee pairs matched?
             <span></span>
         </div>
@@ -375,7 +382,7 @@ permalink: /mentorship/
     </div>
 
     <div class="faq-item">
-        <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+        <div class="faq-question">
             Can the mentorship be conducted remotely?
             <span></span>
         </div>
@@ -385,7 +392,7 @@ permalink: /mentorship/
     </div>
 
     <div class="faq-item">
-        <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+        <div class="faq-question">
             Is there a cost to participate in the program?
             <span></span>
         </div>
@@ -395,7 +402,7 @@ permalink: /mentorship/
     </div>
 
     <div class="faq-item">
-        <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+        <div class="faq-question">
             What is the time commitment required?
             <span></span>
         </div>
@@ -405,7 +412,7 @@ permalink: /mentorship/
     </div>
 
     <div class="faq-item">
-        <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+        <div class="faq-question">
             What kind of support is provided during the mentorship?
             <span></span>
         </div>
@@ -415,7 +422,7 @@ permalink: /mentorship/
     </div>
 
     <div class="faq-item">
-        <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+        <div class="faq-question">
             Can I apply to be both a mentor and mentee?
             <span></span>
         </div>
@@ -425,7 +432,7 @@ permalink: /mentorship/
     </div>
 
     <div class="faq-item">
-        <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+        <div class="faq-question">
             What happens if the mentorship relationship isn't working out?
             <span></span>
         </div>
@@ -434,5 +441,7 @@ permalink: /mentorship/
         </div>
     </div>
 </div>
+
+<script src="/assets/js/faq-toggle.js" defer></script>
 
 {% include cta-section.html %}
