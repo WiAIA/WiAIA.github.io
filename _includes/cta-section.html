@@ -1,21 +1,73 @@
-<!-- CTA Section Component -->
-<!-- Usage: {% include cta-section.html title="Title" description="Description" primary_text="CTA" primary_link="/link/" %} -->
-
 <section class="cta-section" aria-labelledby="cta-title">
   <div class="container">
-    <h2 id="cta-title" class="cta-section__title">{{ include.title }}</h2>
-    <p class="cta-section__description">{{ include.description }}</p>
-    <div class="cta-section__actions">
-      {% if include.primary_text and include.primary_link %}
-        <a href="{{ include.primary_link }}" class="btn btn-primary">
-          {{ include.primary_text }}
-        </a>
-      {% endif %}
-      {% if include.secondary_text and include.secondary_link %}
-        <a href="{{ include.secondary_link }}" class="btn btn-secondary">
-          {{ include.secondary_text }}
-        </a>
-      {% endif %}
+    <div class="cta-section__content">
+      <h2 id="cta-title" class="cta-section__title">{{ include.title }}</h2>
+      <p class="cta-section__description">{{ include.description }}</p>
+      <div class="cta-section__actions">
+        {% if include.primary_text and include.primary_link %}
+          <a href="{{ include.primary_link }}" class="btn btn-primary">
+            {{ include.primary_text }}
+          </a>
+        {% endif %}
+        {% if include.secondary_text and include.secondary_link %}
+          <a href="{{ include.secondary_link }}" class="btn btn-secondary">
+            {{ include.secondary_text }}
+          </a>
+        {% endif %}
+      </div>
     </div>
   </div>
 </section>
+
+<style>
+  .cta-section {
+    padding: var(--section-padding) 0;
+    text-align: center;
+    background: var(--background);
+    position: relative;
+  }
+
+  .cta-section__content {
+    position: relative;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 3rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: var(--shadow-md);
+  }
+
+  .cta-section__title {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--foreground);
+    font-weight: 400;
+  }
+
+  .cta-section__description {
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--muted-foreground);
+    line-height: 1.75;
+  }
+
+  .cta-section__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .cta-section__actions {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+</style>

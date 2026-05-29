@@ -1,8 +1,7 @@
-<!-- Navigation Component -->
 <nav class="nav" role="navigation" aria-label="Main navigation">
   <div class="container nav__container">
     <a href="{{ '/' | relative_url }}" class="nav__logo" aria-label="Home">
-      {{ site.title }}
+      <img src="/assets/images/logo.svg" alt="WiAIA - Women in AI & Analytics" class="nav__logo-img">
     </a>
 
     <button class="nav__toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
@@ -22,6 +21,9 @@
         <a href="{{ '/mentorship/' | relative_url }}" class="nav__link {% if page.url == '/mentorship/' %}nav__link--active{% endif %}">Mentorship</a>
       </li>
       <li class="nav__item">
+        <a href="{{ '/blog/' | relative_url }}" class="nav__link {% if page.url == '/blog/' %}nav__link--active{% endif %}">Blog</a>
+      </li>
+      <li class="nav__item">
         <a href="{{ '/contact/' | relative_url }}" class="nav__link {% if page.url == '/contact/' %}nav__link--active{% endif %}">Contact</a>
       </li>
     </ul>
@@ -30,8 +32,8 @@
 
 <style>
   .nav {
-    background: #FFFFFF;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -41,32 +43,47 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 1.25rem 1.5rem;
   }
 
   .nav__logo {
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 1.25rem;
-    color: #0F172A;
+    display: flex;
+    align-items: center;
     text-decoration: none;
+    position: relative;
+    transition: var(--transition-base);
+  }
+
+  .nav__logo-img {
+    height: 45px;
+    width: auto;
+  }
+
+  .nav__logo:hover {
+    opacity: 0.9;
   }
 
   .nav__toggle {
     display: none;
     flex-direction: column;
     background: none;
-    border: none;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
     cursor: pointer;
     padding: 0.5rem;
+    transition: var(--transition-base);
+  }
+
+  .nav__toggle:hover {
+    border-color: var(--accent);
   }
 
   .nav__toggle-line {
-    width: 25px;
-    height: 3px;
-    background-color: #0F172A;
+    width: 20px;
+    height: 2px;
+    background-color: var(--foreground);
     margin: 3px 0;
-    transition: 0.3s;
+    transition: var(--transition-base);
   }
 
   .nav__menu {
@@ -78,15 +95,39 @@
   }
 
   .nav__link {
-    text-decoration: none;
-    color: #334155;
+    font-family: var(--font-body);
+    font-size: 0.875rem;
     font-weight: 500;
-    transition: color 0.3s;
+    text-decoration: none;
+    color: var(--muted-foreground);
+    position: relative;
+    padding: 0.5rem 0;
+    transition: var(--transition-base);
+    letter-spacing: 0.05em;
+  }
+
+  .nav__link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: var(--transition-base);
   }
 
   .nav__link:hover,
   .nav__link--active {
-    color: #7C3AED;
+    color: var(--foreground);
+  }
+
+  .nav__link:hover::after,
+  .nav__link--active::after {
+    transform: scaleX(1);
+    transform-origin: left;
   }
 
   @media (max-width: 768px) {
@@ -101,10 +142,11 @@
       top: 100%;
       left: 0;
       right: 0;
-      background: white;
+      background: var(--card);
       padding: 1rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-top: 1px solid var(--border);
       gap: 0;
+      box-shadow: var(--shadow-md);
     }
 
     .nav__menu.active {
@@ -113,7 +155,7 @@
 
     .nav__item {
       padding: 0.75rem 0;
-      border-bottom: 1px solid #E2E8F0;
+      border-bottom: 1px solid var(--border);
     }
 
     .nav__item:last-child {

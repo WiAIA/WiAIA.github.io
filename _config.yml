@@ -1,7 +1,7 @@
 # Site settings
-title: "Women in AI & Analytics Mentoring"
-description: "Empowering women in AI, Data Science, Machine Learning, and Analytics through mentorship, collaboration, and leadership opportunities"
-author: "Women in AI & Analytics Mentoring"
+title: "WiAIA - Women in AI & Analytics"
+description: "Empowering the Next Generation of Women in AI & Analytics through mentorship, collaboration, and community"
+author: "WiAIA - Women in AI & Analytics"
 
 # URL configuration
 # url: "https://wiaia.github.io"  # or your custom domain
@@ -71,4 +71,5 @@ timezone: America/New_York
 
 # Build settings
 sass:
+  sass_dir: _sass
   style: compressed

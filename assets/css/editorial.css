@@ -1,0 +1,514 @@
+/* ========================================
+   Editorial Design System - Serif Style
+   ======================================== */
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Sans+3:wght@400;500;600&display=swap');
+
+/* ========================================
+   DESIGN TOKEN SYSTEM
+   ======================================== */
+
+:root {
+  /* Color System */
+  --background: #FAFAF8;           /* Ivory - warm premium background */
+  --foreground: #1A1A1A;           /* Rich black - primary text */
+  --muted: #F5F3F0;                /* Secondary surfaces */
+  --muted-foreground: #6B6B6B;    /* Warm gray - secondary text */
+  --accent: #B8860B;               /* Burnished gold - primary accent */
+  --accent-secondary: #D4A84B;     /* Lighter gold - gradients/hover */
+  --accent-foreground: #FFFFFF;    /* Text on accent backgrounds */
+  --border: #E8E4DF;              /* Warm gray - borders and rules */
+  --card: #FFFFFF;                 /* White - card surfaces */
+  --ring: #B8860B;                 /* Focus rings - matches accent */
+  --input: #E8E4DF;                /* Input borders */
+  --border-hover: #D4CFC6;         /* Hover border color */
+
+  /* Typography System */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Source Sans 3', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  /* Spacing System */
+  --section-padding: 8rem;         /* py-32 equivalent */
+  --section-padding-large: 11rem;   /* py-44 equivalent */
+  --container-max-width: 64rem;    /* max-w-5xl equivalent */
+  --component-gap: 2rem;           /* gap-8 equivalent */
+
+  /* Border Radius */
+  --radius-sm: 4px;                /* rounded-sm */
+  --radius-md: 6px;                /* rounded-md */
+  --radius-lg: 8px;                /* rounded-lg */
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(26, 26, 26, 0.04);
+  --shadow-md: 0 4px 12px rgba(26, 26, 26, 0.06);
+  --shadow-lg: 0 8px 24px rgba(26, 26, 26, 0.08);
+  --shadow-accent: 0 4px 12px rgba(184, 134, 11, 0.15);
+
+  /* Transitions */
+  --transition-base: all 200ms ease-out;
+  --transition-subtle: all 150ms ease-out;
+}
+
+/* ========================================
+   GLOBAL BASE STYLES
+   ======================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.75; /* Relaxed reading line height */
+  color: var(--foreground);
+  background-color: var(--background);
+  /* Subtle paper texture overlay */
+  position: relative;
+  letter-spacing: 0.01em; /* Slight positive tracking */
+}
+
+/* Paper Texture Overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Ambient Glow */
+body::after {
+  content: '';
+  position: fixed;
+  top: -50%;
+  right: -20%;
+  width: 80%;
+  height: 80%;
+  background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+  opacity: 0.02;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Content sits above overlays */
+main, .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* ========================================
+   TYPOGRAPHY SYSTEM
+   ======================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: var(--foreground);
+  letter-spacing: -0.01em; /* Slight negative tracking for headlines */
+}
+
+h1 {
+  font-size: 4.5rem; /* 7xl equivalent */
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 2.5rem; /* 4xl equivalent */
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 1.75rem; /* 3xl equivalent */
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 1.5rem; /* 2xl equivalent */
+  font-weight: 500;
+}
+
+p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/* Mobile responsive typography */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem; /* text-[2.5rem] equivalent */
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+/* ========================================
+   SMALL CAPS UTILITIES
+   ======================================== */
+
+.small-caps {
+  font-family: var(--font-mono);
+  font-size: 0.75rem; /* 12px */
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* ========================================
+   CONTAINER & LAYOUT
+   ======================================== */
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: var(--section-padding) 0;
+}
+
+.section-large {
+  padding: var(--section-padding-large) 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* ========================================
+   BUTTONS (Editorial Style)
+   ======================================== */
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition-base);
+  border-radius: var(--radius-md);
+  min-height: 44px; /* Accessibility requirement */
+  touch-manipulation; /* Better mobile interaction */
+  letter-spacing: 0.05em;
+  border: 2px solid transparent;
+}
+
+/* Primary Button */
+.btn-primary {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent);
+  color: #cc0000; /* Red color on hover */
+  box-shadow: var(--shadow-accent);
+  transform: translateY(-0.5px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Secondary/Outline Button */
+.btn-secondary {
+  background-color: transparent;
+  color: var(--foreground);
+  border: 1px solid var(--foreground);
+}
+
+.btn-secondary:hover {
+  background-color: var(--muted);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Ghost Button */
+.btn-ghost {
+  background-color: transparent;
+  color: var(--muted-foreground);
+  border: none;
+  text-decoration: none;
+}
+
+.btn-ghost:hover {
+  color: var(--foreground);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 4px;
+}
+
+/* Button Sizes */
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.btn-small {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+/* ========================================
+   CARDS (Editorial Style)
+   ======================================== */
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-base);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-hover);
+  background-color: rgba(245, 243, 240, 0.3); /* muted/30 equivalent */
+}
+
+/* Elevated Card */
+.card-elevated {
+  box-shadow: var(--shadow-md);
+}
+
+.card-elevated:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+/* Featured Card */
+.card-featured {
+  background-color: rgba(184, 134, 11, 0.06); /* accent-muted at 6% */
+  border-top: 2px solid var(--accent);
+}
+
+/* ========================================
+   RULE LINES SYSTEM
+   ======================================== */
+
+.rule {
+  border: none;
+  height: 1px;
+  background-color: var(--border);
+  margin: 2rem 0;
+}
+
+.rule-thin {
+  height: 1px;
+  background-color: var(--border);
+}
+
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--border);
+  margin: 3rem 0;
+}
+
+/* ========================================
+   INPUTS (Editorial Style)
+   ======================================== */
+
+input[type="email"],
+input[type="text"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  height: 3rem; /* 44px minimum for accessibility */
+  padding: 0.75rem 1rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  background-color: transparent;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-md);
+  color: var(--foreground);
+  transition: var(--transition-subtle);
+  letter-spacing: 0.01em;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--muted-foreground);
+  opacity: 0.6;
+}
+
+input:hover,
+textarea:hover {
+  border-color: var(--border-hover);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--ring); /* ring-2 ring-offset-2 equivalent */
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* ========================================
+   SECTION LABELS
+   ======================================== */
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.section-label::before,
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: var(--border);
+}
+
+.section-label-text {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+/* Text Colors */
+.text-foreground { color: var(--foreground); }
+.text-muted-foreground { color: var(--muted-foreground); }
+.text-accent { color: var(--accent); }
+
+/* Background Colors */
+.bg-background { background-color: var(--background); }
+.bg-card { background-color: var(--card); }
+.bg-muted { background-color: var(--muted); }
+
+/* Spacing */
+.py-section { padding-top: var(--section-padding); padding-bottom: var(--section-padding); }
+.py-section-large { padding-top: var(--section-padding-large); padding-bottom: var(--section-padding-large); }
+
+/* ========================================
+   RESPONSIVE UTILITIES
+   ======================================== */
+
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .show-mobile {
+    display: none;
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY
+   ======================================== */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ========================================
+   SPECIAL TYPOGRAPHIC ELEMENTS
+   ======================================== */
+
+/* Large Display Numbers */
+.display-number {
+  font-family: var(--font-display);
+  font-size: 3.5rem; /* 5xl equivalent */
+  font-weight: 400;
+  color: var(--accent);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 768px) {
+  .display-number {
+    font-size: 2.5rem; /* text-4xl equivalent */
+  }
+}
+
+/* Pull Quote Style */
+.pull-quote {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--foreground);
+  line-height: 1.4;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.pull-quote::before {
+  content: '"';
+  font-size: 4rem;
+  color: var(--accent);
+  position: absolute;
+  top: 0;
+  left: -1rem;
+  opacity: 0.3;
+  font-family: var(--font-display);
+}

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="faviconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#B8860B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D4A84B;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="32" height="32" fill="#FAFAF8" rx="4"/>
+
+  <!-- W letter -->
+  <text x="16" y="24" font-family="Georgia, serif" font-size="20" font-weight="600" fill="url(#faviconGradient)" text-anchor="middle">
+    W
+  </text>
+
+  <!-- Small dot representing analytics/node -->
+  <circle cx="26" cy="8" r="2" fill="#B8860B" opacity="0.8"/>
+</svg>

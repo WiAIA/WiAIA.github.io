@@ -1,21 +1,83 @@
-<!-- Hero Section Component -->
-<!-- Usage: {% include hero.html title="Title" subtitle="Subtitle" primary_text="CTA 1" primary_link="/link/" secondary_text="CTA 2" secondary_link="/link/" %} -->
-
 <section class="hero" aria-labelledby="hero-title">
   <div class="container">
-    <h1 id="hero-title" class="hero__title">{{ include.title }}</h1>
-    <p class="hero__subtitle">{{ include.subtitle }}</p>
-    <div class="hero__actions">
-      {% if include.primary_text and include.primary_link %}
-        <a href="{{ include.primary_link }}" class="btn btn-primary btn-large">
-          {{ include.primary_text }}
-        </a>
-      {% endif %}
-      {% if include.secondary_text and include.secondary_link %}
-        <a href="{{ include.secondary_link }}" class="btn btn-secondary btn-large">
-          {{ include.secondary_text }}
-        </a>
-      {% endif %}
+    <div class="hero__content">
+      <h1 id="hero-title" class="hero__title">{{ include.title }}</h1>
+      <p class="hero__subtitle">{{ include.subtitle }}</p>
+      <div class="hero__actions">
+        {% if include.primary_text and include.primary_link %}
+          <a href="{{ include.primary_link }}" class="btn btn-primary btn-large">
+            {{ include.primary_text }}
+          </a>
+        {% endif %}
+        {% if include.secondary_text and include.secondary_link %}
+          <a href="{{ include.secondary_link }}" class="btn btn-secondary btn-large">
+            {{ include.secondary_text }}
+          </a>
+        {% endif %}
+      </div>
     </div>
   </div>
 </section>
+
+<style>
+  .hero {
+    background: var(--background);
+    padding: var(--section-padding-large) 0 var(--section-padding);
+    text-align: center;
+    position: relative;
+  }
+
+  .hero__content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero__title {
+    font-family: var(--font-display);
+    font-size: 4.5rem;
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    color: var(--foreground);
+    letter-spacing: -0.02em;
+  }
+
+  .hero__subtitle {
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.75;
+    color: var(--muted-foreground);
+  }
+
+  .hero__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .hero__title {
+      font-size: 4.5rem;
+    }
+
+    .hero__subtitle {
+      font-size: 1.5rem;
+    }
+
+    .hero__actions {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero__title {
+      font-size: 2.5rem;
+    }
+  }
+</style>

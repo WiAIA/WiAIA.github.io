@@ -28,8 +28,8 @@
 
 // Hero section
 .hero {
-  @include gradient-background;
-  color: $color-white;
+  background: linear-gradient(135deg, #e5261f 0%, #f88379 100%);
+  color: #ffffff;
   padding: $spacing-3xl 0;
   text-align: center;
 
@@ -67,7 +67,7 @@
 // Impact stats
 .impact-stats {
   padding: $spacing-3xl 0;
-  background-color: $color-gray-light;
+  background-color: #fff6f8;
 
   &__grid {
     display: grid;
@@ -87,16 +87,25 @@
     text-align: center;
   }
 
+  &__icon {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0 auto $spacing-md;
+    display: block;
+  }
+
   &__number {
     font-size: $font-size-h1;
     font-weight: 700;
-    color: $color-purple;
+    color: #e5261f;
     margin-bottom: $spacing-sm;
   }
 
   &__label {
     font-size: $font-size-body;
-    color: $color-text;
+    color: #5c5a5a;
   }
 }
 
@@ -129,19 +138,19 @@
 
   &__quote {
     font-style: italic;
-    color: $color-text;
+    color: #5c5a5a;
     margin-bottom: $spacing-md;
     line-height: 1.6;
   }
 
   &__author {
     font-weight: 600;
-    color: $color-navy;
+    color: #2f2f41;
   }
 
   &__role {
     font-size: $font-size-small;
-    color: $color-text;
+    color: #5c5a5a;
   }
 }
 
@@ -149,12 +158,12 @@
 .cta-section {
   padding: $spacing-3xl 0;
   text-align: center;
-  background-color: $color-gray-light;
+  background-color: #fff6f8;
 
   &__title {
     font-size: $font-size-h2;
     margin-bottom: $spacing-md;
-    color: $color-navy;
+    color: #2f2f41;
   }
 
   &__description {
@@ -163,6 +172,7 @@
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    color: #5c5a5a;
   }
 
   &__actions {

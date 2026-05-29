@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#B8860B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D4A84B;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- WiAIA Text with gradient -->
+  <text x="10" y="38" font-family="Playfair Display, Georgia, serif" font-size="36" font-weight="600" fill="url(#logoGradient)">
+    WiAIA
+  </text>
+
+  <!-- Decorative elements - neural network nodes -->
+  <circle cx="120" cy="20" r="3" fill="#B8860B" opacity="0.8"/>
+  <circle cx="130" cy="25" r="2.5" fill="#B8860B" opacity="0.6"/>
+  <circle cx="125" cy="30" r="2" fill="#B8860B" opacity="0.7"/>
+  <line x1="120" y1="20" x2="130" y2="25" stroke="#B8860B" stroke-width="1" opacity="0.4"/>
+  <line x1="120" y1="20" x2="125" y2="30" stroke="#B8860B" stroke-width="1" opacity="0.4"/>
+  <line x1="130" y1="25" x2="125" y2="30" stroke="#B8860B" stroke-width="1" opacity="0.4"/>
+
+  <!-- Tagline -->
+  <text x="10" y="52" font-family="Source Sans 3, sans-serif" font-size="10" font-weight="500" fill="#6B6B6B" letter-spacing="0.1em">
+    WOMEN IN AI &amp; ANALYTICS
+  </text>
+</svg>

@@ -1,7 +1,9 @@
-<!-- Impact Stat Component -->
-<!-- Usage: {% include impact-stat.html number="500+" label="Community Members" icon="👥" %} -->
-
 <div class="impact-stats__item">
+  {% if include.icon %}
+    <div class="impact-stats__icon">
+      <i class="fas {{ include.icon }}"></i>
+    </div>
+  {% endif %}
   <div class="impact-stats__number">{{ include.number }}</div>
   <div class="impact-stats__label">{{ include.label }}</div>
 </div>

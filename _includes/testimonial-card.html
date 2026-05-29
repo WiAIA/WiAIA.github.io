@@ -1,9 +1,8 @@
-<!-- Testimonial Card Component -->
-<!-- Usage: {% include testimonial-card.html name="Name" role="Role" company="Company" image="path/to/image.jpg" quote="Quote text" %} -->
-
-<div class="testimonials__card">
-  {% if include.image %}
-    <img src="{{ include.image }}" alt="{{ include.name }}" class="testimonials__photo" loading="lazy">
+<div class="testimonials__card card">
+  {% if include.icon %}
+    <div class="testimonials__photo">
+      <i class="fas {{ include.icon }}"></i>
+    </div>
   {% endif %}
   <p class="testimonials__quote">"{{ include.quote }}"</p>
   <div class="testimonials__author">{{ include.name }}</div>
