@@ -11,6 +11,7 @@ Welcome to Women in AI & Analytics Mentoring! We're passionate about connecting 
 
 <div class="contact-grid">
   <div class="contact-form">
+    <!-- Replace YOUR_FORM_ID with actual Formspree form ID before deployment -->
     <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
       <div class="form-group">
         <label for="name">Name *</label>
@@ -49,7 +50,7 @@ Welcome to Women in AI & Analytics Mentoring! We're passionate about connecting 
       </div>
 
       <button type="submit" class="btn btn-primary">Send Message</button>
-      <div class="form-status" id="form-status"></div>
+      <div class="form-status" id="form-status" role="alert" aria-live="polite"></div>
     </form>
   </div>
 

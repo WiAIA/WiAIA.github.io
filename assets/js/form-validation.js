@@ -29,11 +29,14 @@ document.addEventListener('DOMContentLoaded', function() {
       formStatus.className = 'form-status success';
       formStatus.textContent = 'Thank you for your message! We\'ll get back to you soon.';
       formStatus.style.display = 'block';
+      form.reset();
+      submitBtn.disabled = false;
     } else {
       // Error
       formStatus.className = 'form-status error';
       formStatus.textContent = 'Oops! There was an error sending your message. Please try again.';
       formStatus.style.display = 'block';
+      submitBtn.disabled = false;
     }
   });
 
@@ -42,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
     formStatus.className = 'form-status error';
     formStatus.textContent = 'Oops! There was an error sending your message. Please try again.';
     formStatus.style.display = 'block';
+    submitBtn.disabled = false;
   });
 
   // Form validation function
