@@ -1,0 +1,21 @@
+<!-- Hero Section Component -->
+<!-- Usage: {% include hero.html title="Title" subtitle="Subtitle" primary_text="CTA 1" primary_link="/link/" secondary_text="CTA 2" secondary_link="/link/" %} -->
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="container">
+    <h1 id="hero-title" class="hero__title">{{ include.title }}</h1>
+    <p class="hero__subtitle">{{ include.subtitle }}</p>
+    <div class="hero__actions">
+      {% if include.primary_text and include.primary_link %}
+        <a href="{{ include.primary_link }}" class="btn btn-primary btn-large">
+          {{ include.primary_text }}
+        </a>
+      {% endif %}
+      {% if include.secondary_text and include.secondary_link %}
+        <a href="{{ include.secondary_link }}" class="btn btn-secondary btn-large">
+          {{ include.secondary_text }}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</section>
