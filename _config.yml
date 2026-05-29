@@ -4,8 +4,8 @@ description: "Empowering women in AI, Data Science, Machine Learning, and Analyt
 author: "Women in AI & Analytics Mentoring"
 
 # URL configuration
-url: "https://wiaia.github.io"
-baseurl: ""
+# url: "https://wiaia.github.io"  # or your custom domain
+# baseurl: ""  # leave empty for root domain
 permalink: pretty
 
 # Social media
