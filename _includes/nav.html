@@ -1,0 +1,139 @@
+<!-- Navigation Component -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="container nav__container">
+    <a href="{{ '/' | relative_url }}" class="nav__logo" aria-label="Home">
+      {{ site.title }}
+    </a>
+
+    <button class="nav__toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+      <span class="nav__toggle-line"></span>
+      <span class="nav__toggle-line"></span>
+      <span class="nav__toggle-line"></span>
+    </button>
+
+    <ul class="nav__menu" id="nav-menu">
+      <li class="nav__item">
+        <a href="{{ '/' | relative_url }}" class="nav__link {% if page.url == '/' %}nav__link--active{% endif %}">Home</a>
+      </li>
+      <li class="nav__item">
+        <a href="{{ '/about/' | relative_url }}" class="nav__link {% if page.url == '/about/' %}nav__link--active{% endif %}">About</a>
+      </li>
+      <li class="nav__item">
+        <a href="{{ '/mentorship/' | relative_url }}" class="nav__link {% if page.url == '/mentorship/' %}nav__link--active{% endif %}">Mentorship</a>
+      </li>
+      <li class="nav__item">
+        <a href="{{ '/contact/' | relative_url }}" class="nav__link {% if page.url == '/contact/' %}nav__link--active{% endif %}">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+  .nav {
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .nav__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .nav__logo {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #0F172A;
+    text-decoration: none;
+  }
+
+  .nav__toggle {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+
+  .nav__toggle-line {
+    width: 25px;
+    height: 3px;
+    background-color: #0F172A;
+    margin: 3px 0;
+    transition: 0.3s;
+  }
+
+  .nav__menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+  }
+
+  .nav__link {
+    text-decoration: none;
+    color: #334155;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+
+  .nav__link:hover,
+  .nav__link--active {
+    color: #7C3AED;
+  }
+
+  @media (max-width: 768px) {
+    .nav__toggle {
+      display: flex;
+    }
+
+    .nav__menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: white;
+      padding: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      gap: 0;
+    }
+
+    .nav__menu.active {
+      display: flex;
+    }
+
+    .nav__item {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid #E2E8F0;
+    }
+
+    .nav__item:last-child {
+      border-bottom: none;
+    }
+  }
+</style>
+
+<script>
+  // Mobile navigation toggle
+  document.addEventListener('DOMContentLoaded', function() {
+    const toggle = document.querySelector('.nav__toggle');
+    const menu = document.querySelector('.nav__menu');
+
+    if (toggle && menu) {
+      toggle.addEventListener('click', function() {
+        menu.classList.toggle('active');
+        const isExpanded = menu.classList.contains('active');
+        toggle.setAttribute('aria-expanded', isExpanded);
+      });
+    }
+  });
+</script>
