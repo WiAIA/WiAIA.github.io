@@ -101,7 +101,7 @@ Welcome to Women in AI & Analytics Mentoring! We're passionate about connecting 
   }
 }
 
-.contact-form-section {
+.contact-form {
   background: var(--bg-card);
   padding: 2rem;
   border-radius: 8px;
@@ -222,17 +222,4 @@ Welcome to Women in AI & Analytics Mentoring! We're passionate about connecting 
   color: #c0392b;
 }
 
-.link-btn {
-  display: inline-block;
-  margin-top: 1rem;
-  color: var(--primary-color);
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.link-btn:hover {
-  color: #c0392b;
-  text-decoration: underline;
-}
 </style>
