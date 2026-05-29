@@ -1,9 +1,9 @@
 <!-- CTA Section Component -->
 <!-- Usage: {% include cta-section.html title="Title" description="Description" primary_text="CTA" primary_link="/link/" %} -->
 
-<section class="cta-section" aria-labelledby="cta-title-{{ include.title | slugify }}">
+<section class="cta-section" aria-labelledby="cta-title">
   <div class="container">
-    <h2 id="cta-title-{{ include.title | slugify }}" class="cta-section__title">{{ include.title }}</h2>
+    <h2 id="cta-title" class="cta-section__title">{{ include.title }}</h2>
     <p class="cta-section__description">{{ include.description }}</p>
     <div class="cta-section__actions">
       {% if include.primary_text and include.primary_link %}
