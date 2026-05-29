@@ -4,8 +4,8 @@ description: "Empowering the Next Generation of Women in AI & Analytics through 
 author: "WiAIA - Women in AI & Analytics"
 
 # URL configuration
-# url: "https://wiaia.github.io"  # or your custom domain
-# baseurl: ""  # leave empty for root domain
+url: "https://wiaia.github.io"
+baseurl: ""
 permalink: pretty
 
 # Social media
@@ -13,43 +13,17 @@ github_username: wiaia
 linkedin: company/wiaia
 twitter: wiaia_org
 
-# Theme settings
-# Using minimal theme for testing
-
 # Collections
 collections:
   posts:
     output: true
     permalink: /blog/:year/:month/:day/:title/
-  events:
-    output: true
-    permalink: /events/:title/
-  team:
-    output: false
 
-# Default layouts
-defaults:
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "page"
-  - scope:
-      path: "_posts"
-      type: "posts"
-    values:
-      layout: "post"
-      author: "WIAA Team"
-
-# Plugins
+# Plugins - GitHub Pages compatible
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed
-
-# GitHub Pages specific settings
-github:
-  source: "."
 
 # Exclude from processing
 exclude:
