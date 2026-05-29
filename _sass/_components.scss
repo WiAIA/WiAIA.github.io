@@ -1,0 +1,180 @@
+// Component styles
+@import 'variables';
+@import 'mixins';
+
+// Button styles
+.btn {
+  &-primary {
+    @include button-primary;
+  }
+
+  &-secondary {
+    @include button-secondary;
+  }
+
+  &-large {
+    padding: 1rem 2rem;
+    font-size: $font-size-h4;
+  }
+
+  &-small {
+    padding: 0.5rem 1rem;
+    font-size: $font-size-small;
+  }
+}
+
+// Card styles
+.card {
+  @include card-style;
+}
+
+// Hero section
+.hero {
+  @include gradient-background;
+  color: $color-white;
+  padding: $spacing-3xl 0;
+  text-align: center;
+
+  &__title {
+    font-size: $font-size-h1;
+    margin-bottom: $spacing-lg;
+    line-height: 1.2;
+
+    @include respond-to(sm) {
+      font-size: 3rem;
+    }
+  }
+
+  &__subtitle {
+    font-size: $font-size-body;
+    margin-bottom: $spacing-xl;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+
+    @include respond-to(sm) {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+}
+
+// Impact stats
+.impact-stats {
+  padding: $spacing-3xl 0;
+  background-color: $color-gray-light;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-xl;
+
+    @include respond-to(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond-to(lg) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__item {
+    text-align: center;
+  }
+
+  &__number {
+    font-size: $font-size-h1;
+    font-weight: 700;
+    color: $color-purple;
+    margin-bottom: $spacing-sm;
+  }
+
+  &__label {
+    font-size: $font-size-body;
+    color: $color-text;
+  }
+}
+
+// Testimonials
+.testimonials {
+  padding: $spacing-3xl 0;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-xl;
+
+    @include respond-to(md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__card {
+    @include card-style;
+    text-align: center;
+  }
+
+  &__photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: $spacing-md;
+  }
+
+  &__quote {
+    font-style: italic;
+    color: $color-text;
+    margin-bottom: $spacing-md;
+    line-height: 1.6;
+  }
+
+  &__author {
+    font-weight: 600;
+    color: $color-navy;
+  }
+
+  &__role {
+    font-size: $font-size-small;
+    color: $color-text;
+  }
+}
+
+// CTA section
+.cta-section {
+  padding: $spacing-3xl 0;
+  text-align: center;
+  background-color: $color-gray-light;
+
+  &__title {
+    font-size: $font-size-h2;
+    margin-bottom: $spacing-md;
+    color: $color-navy;
+  }
+
+  &__description {
+    font-size: $font-size-body;
+    margin-bottom: $spacing-xl;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+
+    @include respond-to(sm) {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+}

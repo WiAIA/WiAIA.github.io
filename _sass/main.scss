@@ -1,0 +1,72 @@
+// Main SCSS entry point
+@import 'variables';
+@import 'mixins';
+@import 'components';
+
+// Base styles
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-body;
+  line-height: 1.6;
+  color: $color-text;
+  background-color: $color-white;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-heading;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: $spacing-md;
+  color: $color-navy;
+}
+
+h1 { font-size: $font-size-h1; }
+h2 { font-size: $font-size-h2; }
+h3 { font-size: $font-size-h3; }
+h4 { font-size: $font-size-h4; }
+
+p {
+  margin-bottom: $spacing-md;
+}
+
+a {
+  color: $color-purple;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-purple-dark;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    outline: 2px solid $color-purple;
+    outline-offset: 2px;
+  }
+}
+
+// Container
+.container {
+  @include container;
+}
+
+// Accessibility
+.visually-hidden {
+  @include visually-hidden;
+}
+
+// Focus visible for keyboard navigation
+*:focus-visible {
+  outline: 2px solid $color-purple;
+  outline-offset: 2px;
+}
