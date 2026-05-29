@@ -47,6 +47,10 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
 
+# GitHub Pages specific settings
+github:
+  source: "."
+
 # Exclude from processing
 exclude:
   - .sass-cache/
