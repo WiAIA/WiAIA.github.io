@@ -10,7 +10,7 @@ permalink: /contact/
 Welcome to Women in AI & Analytics Mentoring! We're passionate about connecting women with mentors in the AI and analytics fields. Whether you're looking for guidance, want to share your expertise, or interested in partnership opportunities, we'd love to hear from you.
 
 <div class="contact-grid">
-  <div class="contact-form-section">
+  <div class="contact-form">
     <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
       <div class="form-group">
         <label for="name">Name *</label>
@@ -26,13 +26,13 @@ Welcome to Women in AI & Analytics Mentoring! We're passionate about connecting 
         <label for="subject">Subject *</label>
         <select id="subject" name="subject" required>
           <option value="">Select a subject</option>
-          <option value="mentorship">Mentorship Inquiry</option>
-          <option value="volunteer">Volunteer as Mentor</option>
-          <option value="partnership">Partnership Opportunity</option>
-          <option value="event">Event Inquiry</option>
-          <option value="donation">Donation/Sponsorship</option>
-          <option value="press">Press/Media</option>
-          <option value="general">General Question</option>
+          <option value="Mentor Application">Mentor Application</option>
+          <option value="Mentee Application">Mentee Application</option>
+          <option value="General Inquiry">General Inquiry</option>
+          <option value="Partnership">Partnership</option>
+          <option value="Volunteer">Volunteer</option>
+          <option value="Event">Event</option>
+          <option value="Other">Other</option>
         </select>
       </div>
 
@@ -48,7 +48,7 @@ Welcome to Women in AI & Analytics Mentoring! We're passionate about connecting 
         </label>
       </div>
 
-      <button type="submit" class="submit-btn">Send Message</button>
+      <button type="submit" class="btn btn-primary">Send Message</button>
       <div class="form-status" id="form-status"></div>
     </form>
   </div>
@@ -56,7 +56,7 @@ Welcome to Women in AI & Analytics Mentoring! We're passionate about connecting 
   <div class="contact-info-section">
     <div class="contact-info-card">
       <h3>Email Us</h3>
-      <p>hello@womeninaiandanalytics.org</p>
+      <p>hello@wiaia.org</p>
       <p>We typically respond within 24-48 business hours</p>
     </div>
 
@@ -73,13 +73,13 @@ Welcome to Women in AI & Analytics Mentoring! We're passionate about connecting 
     <div class="contact-info-card">
       <h3>Volunteer With Us</h3>
       <p>Share your expertise and make a difference! Join our network of mentors who are helping advance women in AI and analytics.</p>
-      <a href="/mentorship/" class="link-btn">Learn About Volunteering</a>
+      <a href="/mentorship/">Learn About Volunteering</a>
     </div>
 
     <div class="contact-info-card">
       <h3>Partner With Us</h3>
       <p>Partner with us to create opportunities for women in AI and analytics. We welcome collaborations with organizations, universities, and industry leaders.</p>
-      <a href="/about/partnerships" class="link-btn">Partnership Opportunities</a>
+      <a href="/about/partnerships">Partnership Opportunities</a>
     </div>
   </div>
 </div>
@@ -94,7 +94,7 @@ Welcome to Women in AI & Analytics Mentoring! We're passionate about connecting 
   margin-top: 3rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -152,7 +152,6 @@ Welcome to Women in AI & Analytics Mentoring! We're passionate about connecting 
 .form-group textarea:focus {
   outline: none;
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2);
 }
 
 .checkbox-label {
@@ -166,7 +165,7 @@ Welcome to Women in AI & Analytics Mentoring! We're passionate about connecting 
   margin-top: 0.25rem;
 }
 
-.submit-btn {
+.btn.btn-primary {
   background-color: var(--primary-color);
   color: white;
   padding: 0.75rem 1.5rem;
@@ -177,11 +176,11 @@ Welcome to Women in AI & Analytics Mentoring! We're passionate about connecting 
   transition: background-color 0.3s;
 }
 
-.submit-btn:hover {
+.btn.btn-primary:hover {
   background-color: #c0392b;
 }
 
-.submit-btn:disabled {
+.btn.btn-primary:disabled {
   background-color: #95a5a6;
   cursor: not-allowed;
 }
