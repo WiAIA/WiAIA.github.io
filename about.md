@@ -23,22 +23,22 @@ What began as informal meetups has grown into a vibrant community of hundreds of
 
 ## Our Core Values
 
-### Inclusion 🤝
+### Inclusion 
 We create welcoming spaces where all women in tech feel they belong. Diversity of background, experience, and perspective strengthens our community and drives innovation.
 
-### Innovation 💡
+### Innovation 
 We embrace cutting-edge developments in AI and analytics. Our community stays at the forefront of technology through continuous learning and knowledge sharing.
 
-### Mentorship 🎯
+### Mentorship 
 We believe in the power of guidance and support. Every professional's journey is unique, and the right mentor can make all the difference in achieving career goals.
 
-### Leadership 👑
+### Leadership 
 We empower the next generation of women leaders in AI and analytics. Through mentorship and community, we build confidence and skills for leadership roles.
 
-### Community 🌟
+### Community 
 We build lasting professional connections. Our network extends beyond mentorship pairs to create a supportive ecosystem for career growth.
 
-## Our Team
+<!--## Our Team
 
 <div class="team-grid">
   <div class="team-card">
@@ -70,7 +70,7 @@ We build lasting professional connections. Our network extends beyond mentorship
       <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
     </div>
   </div>
-</div>
+</div>-->
 
 ## Our Journey
 
