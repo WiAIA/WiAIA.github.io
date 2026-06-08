@@ -76,45 +76,14 @@ We build lasting professional connections. Our network extends beyond mentorship
 
 <div class="timeline">
   <div class="timeline-item">
-    <div class="timeline-date">2020</div>
+    <div class="timeline-date">2020-2025</div>
     <div class="timeline-content">
-      <h3>Founded</h3>
-      <p>Women in AI & Analytics Mentoring established with 25 founding members and 10 initial mentor-mentee pairs.</p>
+      <h3>Mentoring and Internationalization</h3>
+      <p>- Mentored 150+ students of Brunel University of London and UCL.established with 25 founding members and 10 initial mentor-mentee pairs.</p>
+      <p>- International expansion in 4 different countries</p>
     </div>
   </div>
 
-  <div class="timeline-item">
-    <div class="timeline-date">2021</div>
-    <div class="timeline-content">
-      <h3>First Annual Summit</h3>
-      <p>Hosted our first major conference with 200+ attendees, featuring speakers from leading AI companies.</p>
-    </div>
-  </div>
-
-  <div class="timeline-item">
-    <div class="timeline-date">2022</div>
-    <div class="timeline-content">
-      <h3>Corporate Partnership Program</h3>
-      <p>Launched partnerships with 10+ companies to provide internship and job opportunities for community members.</p>
-    </div>
-  </div>
-
-  <div class="timeline-item">
-    <div class="timeline-date">2023</div>
-    <div class="timeline-content">
-      <h3>500 Members Milestone</h3>
-      <p>Reached 500+ community members with 150+ successful mentor-mentee matches and 50+ events hosted.</p>
-    </div>
-  </div>
-
-  <div class="timeline-item">
-    <div class="timeline-date">2024</div>
-    <div class="timeline-content">
-      <h3>International Expansion</h3>
-      <p>Expanded our reach globally with members in 15+ countries and launched virtual mentorship program.</p>
-    </div>
-  </div>
-</div>
 
 {% include cta-section.html
   title="Join Our Growing Community"
