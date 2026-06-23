@@ -80,7 +80,7 @@ image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&h=400
         <p>
           Are you working at the intersection of AI and earth sciences? Our mentorship program connects women in emerging tech fields with experienced professionals who can help guide your career journey.
         </p>
-        <a href="/mentorship/" class="btn btn-primary">Find a Mentor</a>
+        <a href="#" class="btn btn-primary" data-open-mentor-form>Find a Mentor</a>
       </div>
 
     </div>
@@ -229,3 +229,6 @@ image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&h=400
     }
   }
 </style>
+
+{% include mentor-form-modal.html %}
+{% include mentor-application-modal.html %}

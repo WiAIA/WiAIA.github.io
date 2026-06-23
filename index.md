@@ -9,9 +9,11 @@ permalink: /
   title="Empowering the Next Generation of Women in AI & Analytics"
   subtitle="We foster a supportive network where aspiring and established professionals connect, grow, and thrive in their AI and analytics careers through mentorship, collaboration, and knowledge sharing."
   primary_text="Find a Mentor"
-  primary_link="/mentorship/"
+  primary_link="#"
+  primary_data="open-mentor-form"
   secondary_text="Become a Mentor"
-  secondary_link="/mentorship/"
+  secondary_link="#"
+  secondary_data="open-mentor-application-form"
 %}
 
 <section class="section" aria-labelledby="mission-title">
@@ -205,9 +207,11 @@ permalink: /
   title="Ready to Start Your Journey?"
   description="Join our community of women in AI and analytics. Whether you're looking for a mentor or ready to share your experience, we'd love to have you."
   primary_text="Find a Mentor"
-  primary_link="/mentorship/"
+  primary_link="#"
+  primary_data="open-mentor-form"
   secondary_text="Become a Mentor"
-  secondary_link="/mentorship/"
+  secondary_link="#"
+  secondary_data="open-mentor-application-form"
 %}
 
 <section class="newsletter-section" aria-labelledby="newsletter-title">
@@ -531,3 +535,6 @@ permalink: /
     box-shadow: 0 0 0 2px var(--ring);
   }
 </style>
+
+{% include mentor-form-modal.html %}
+{% include mentor-application-modal.html %}
