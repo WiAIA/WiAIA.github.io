@@ -1,0 +1,204 @@
+<!-- Partnership Announcement Banner -->
+<div class="partnership-banner" id="partnership-banner">
+  <div class="container partnership-banner__container">
+    <div class="partnership-banner__content">
+      <span class="partnership-banner__icon">
+        <i class="fas fa-handshake"></i>
+      </span>
+      <div class="partnership-banner__text">
+        <strong>We are open for partnerships with other organisations!</strong>
+        <span class="partnership-banner__subtext">Let's collaborate to empower women in AI & Analytics</span>
+      </div>
+    </div>
+    <div class="partnership-banner__actions">
+      <a href="/contact/" class="btn btn-small btn-primary partnership-banner__cta">Get in Touch</a>
+      <button class="partnership-banner__close" id="close-partnership-banner" aria-label="Close banner">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .partnership-banner {
+    background: linear-gradient(135deg, #cc0000 0%, #990000 100%);
+    color: white;
+    padding: 1rem 0;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1001;
+  }
+
+  .partnership-banner__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .partnership-banner__content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+  }
+
+  .partnership-banner__icon {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .partnership-banner__text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .partnership-banner__text strong {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.3;
+    font-family: var(--font-display);
+  }
+
+  .partnership-banner__subtext {
+    font-size: 0.875rem;
+    opacity: 0.95;
+    font-family: var(--font-body);
+  }
+
+  .partnership-banner__actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
+  }
+
+  .partnership-banner__cta {
+    background: white;
+    color: #cc0000;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+
+  .partnership-banner__cta:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .partnership-banner__close {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    flex-shrink: 0;
+  }
+
+  .partnership-banner__close:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+  }
+
+  .partnership-banner.hidden {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .partnership-banner__container {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .partnership-banner__content {
+      width: 100%;
+    }
+
+    .partnership-banner__text strong {
+      font-size: 0.9rem;
+    }
+
+    .partnership-banner__subtext {
+      font-size: 0.8rem;
+    }
+
+    .partnership-banner__actions {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .partnership-banner__cta {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.8rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .partnership-banner__container {
+      padding: 0 1rem;
+    }
+
+    .partnership-banner__icon {
+      width: 32px;
+      height: 32px;
+      font-size: 1.25rem;
+    }
+
+    .partnership-banner__text strong {
+      font-size: 0.85rem;
+    }
+
+    .partnership-banner__subtext {
+      font-size: 0.75rem;
+    }
+
+    .partnership-banner__cta {
+      font-size: 0.75rem;
+      padding: 0.4rem 0.6rem;
+    }
+  }
+</style>
+
+<script>
+  (function() {
+    // Check if banner was previously closed
+    if (localStorage.getItem('partnershipBannerClosed') === 'true') {
+      const banner = document.getElementById('partnership-banner');
+      if (banner) {
+        banner.classList.add('hidden');
+      }
+    }
+
+    // Handle close button
+    const closeBtn = document.getElementById('close-partnership-banner');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function() {
+        const banner = document.getElementById('partnership-banner');
+        if (banner) {
+          banner.classList.add('hidden');
+          localStorage.setItem('partnershipBannerClosed', 'true');
+        }
+      });
+    }
+  })();
+</script>

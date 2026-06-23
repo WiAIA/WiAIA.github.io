@@ -299,7 +299,7 @@ Naming Convention:
 - **Layout:** Center-aligned form with proper spacing
 
 #### Contact Information Section
-- **Email:** hello@wiaia.org (placeholder)
+- **Email:** wiaia@proton.me (placeholder)
 - **Social Media:** LinkedIn, Twitter, Instagram, GitHub
 - **Visual:** Social media icons with links
 - **Layout:** Center-aligned with icons

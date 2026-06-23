@@ -57,7 +57,7 @@ Welcome to Women in AI & Analytics Mentoring! We're passionate about connecting 
   <div class="contact-info-section">
     <div class="contact-info-card">
       <h3>Email Us</h3>
-      <p>hello@wiaia.org</p>
+      <p>wiaia@proton.me</p>
       <p>We typically respond within 24-48 business hours</p>
     </div>
 

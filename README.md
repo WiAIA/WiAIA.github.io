@@ -199,11 +199,11 @@ Open an issue with:
 
 ### Technical Support
 - **GitHub Issues:** For bugs and technical problems
-- **Email:** hello@wiaia.org
+- **Email:** wiaia@proton.me
 - **Documentation:** See docs/ folder
 
 ### Content Support
-- **Email:** hello@wiaia.org
+- **Email:** wiaia@proton.me
 - **Subject:** Website Content Question
 
 ## 📄 License

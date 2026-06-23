@@ -411,7 +411,7 @@ countries: 8
    - Create an issue in the WIAIA repository with clear descriptions
    - Screenshots help us understand your issue quickly
 
-2. **Email**: contact@wiaia.org for general questions
+2. **Email**: wiaia@proton.me for general questions
    - Include "Content Editing Question" in the subject line
    - Allow 24-48 hours for response
 
@@ -447,4 +447,4 @@ countries: 8
 ---
 
 *Last Updated: May 29, 2026*
-*For questions about this guide, email contact@wiaia.org*
+*For questions about this guide, email wiaia@proton.me*

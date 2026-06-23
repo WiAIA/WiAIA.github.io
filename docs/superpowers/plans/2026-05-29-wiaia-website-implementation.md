@@ -2258,7 +2258,7 @@ We'd love to hear from you! Whether you're interested in mentorship, want to par
   <div class="contact-info-section">
     <div class="contact-info-card">
       <h3>Email</h3>
-      <a href="mailto:hello@wiaia.org">hello@wiaia.org</a>
+      <a href="mailto:wiaia@proton.me">wiaia@proton.me</a>
       <p>We'll respond within 2-3 business days</p>
     </div>
 
@@ -3640,11 +3640,11 @@ Open an issue with:
 
 ### Technical Support
 - **GitHub Issues:** For bugs and technical problems
-- **Email:** hello@wiaia.org
+- **Email:** wiaia@proton.me
 - **Documentation:** See docs/ folder
 
 ### Content Support
-- **Email:** hello@wiaia.org
+- **Email:** wiaia@proton.me
 - **Subject:** Website Content Question
 
 ## 📄 License
@@ -3727,7 +3727,7 @@ Visit your GitHub Pages URL and verify full functionality
 ### Support
 For questions or issues:
 - Technical: GitHub Issues
-- Content: Email hello@wiaia.org
+- Content: Email wiaia@proton.me
 - Documentation: docs/ folder
 
 **🎉 Congratulations! Your Women in AI & Analytics Mentoring website is now live!**
