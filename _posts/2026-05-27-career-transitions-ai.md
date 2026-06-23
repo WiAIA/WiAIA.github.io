@@ -2,7 +2,7 @@
 title: "Career Transitions to AI: A Guide for Professionals"
 date: 2026-05-27T08:00:00Z
 category: Career
-author: "Aisha Patel, ML Engineer"
+author: ""
 layout: post
 description: "How professionals from diverse backgrounds are successfully transitioning into AI and machine learning careers, and what you need to know to make the leap."
 image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop"

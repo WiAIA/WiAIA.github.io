@@ -65,7 +65,7 @@ permalink: /
   </div>
 </section>
 
-<section class="impact-stats" aria-labelledby="impact-title">
+<!-- <section class="impact-stats" aria-labelledby="impact-title">
   <div class="container">
     <h2 id="impact-title" class="visually-hidden">Our Impact</h2>
     <div class="impact-stats__grid">
@@ -75,7 +75,7 @@ permalink: /
       {% include impact-stat.html number="20+" label="Partner Organizations" icon="fa-building" %}
     </div>
   </div>
-</section>
+</section> -->
 
 <style>
   .impact-stats {
@@ -170,7 +170,7 @@ permalink: /
   </div>
 </section>
 
-<section class="testimonials" aria-labelledby="testimonials-title">
+<!--<section  class="testimonials" aria-labelledby="testimonials-title">
   <div class="container">
     <h2 id="testimonials-title" class="section__title text-center">Success Stories</h2>
     <p class="section__text text-center">Hear from women who have transformed their careers through mentorship</p>
@@ -201,7 +201,7 @@ permalink: /
       %}
     </div>
   </div>
-</section>
+</section> -->
 
 {% include cta-section.html
   title="Ready to Start Your Journey?"
@@ -214,7 +214,7 @@ permalink: /
   secondary_data="open-mentor-application-form"
 %}
 
-<section class="newsletter-section" aria-labelledby="newsletter-title">
+<!-- <section class="newsletter-section" aria-labelledby="newsletter-title">
   <div class="container">
     <div class="newsletter-card">
       <h2 id="newsletter-title" class="newsletter__title">Stay Connected</h2>
@@ -233,7 +233,7 @@ permalink: /
       </form>
     </div>
   </div>
-</section>
+</section> -->
 
 <style>
   .section {

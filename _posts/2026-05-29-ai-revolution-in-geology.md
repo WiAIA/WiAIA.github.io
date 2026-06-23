@@ -2,7 +2,7 @@
 title: "The AI Revolution in Geology: How Machine Learning is Transforming Earth Sciences"
 date: 2026-05-29T08:00:00Z
 category: Technology
-author: "Dr. Sarah Chen, PhD"
+author: ""
 layout: post
 description: "Exploring how artificial intelligence and machine learning are revolutionizing geological research, from mineral exploration to climate prediction."
 image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&h=400&fit=crop"

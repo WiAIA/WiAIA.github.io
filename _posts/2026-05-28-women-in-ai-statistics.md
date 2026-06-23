@@ -2,7 +2,7 @@
 title: "Women in AI Statistics: Breaking Barriers in Data Science"
 date: 2026-05-28T08:00:00Z
 category: Community
-author: "Dr. Maya Rodriguez, PhD"
+author: ""
 layout: post
 description: "Exploring the growing impact of women in AI and statistics, and how mentorship is shaping the future of data science."
 image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=400&fit=crop"
